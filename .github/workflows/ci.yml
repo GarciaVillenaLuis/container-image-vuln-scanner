@@ -15,4 +15,5 @@ jobs:
         run: |
           python container_vuln_scanner.py --stats
           python container_vuln_scanner.py --dockerfile samples/sample_dockerfile
+          python container_vuln_scanner.py --sbom samples/clean_sbom.json
           python container_vuln_scanner.py --sbom samples/cyclonedx_sbom.json --format json || true
