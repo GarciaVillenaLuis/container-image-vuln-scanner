@@ -1,0 +1,18 @@
+# Sample vulnerable Dockerfile for DevSecOps linting demonstration
+FROM node:latest
+
+WORKDIR /app
+
+# Insecure remote execution pattern
+RUN curl -sSL https://raw.githubusercontent.com/untrusted/install.sh | bash
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Insecure: Runs as root by default (no USER declared)
+# Insecure: Exposes SSH
+EXPOSE 22 3000
+
+CMD ["node", "server.js"]
