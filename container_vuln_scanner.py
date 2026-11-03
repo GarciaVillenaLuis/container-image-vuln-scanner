@@ -116,8 +116,17 @@ class ContainerVulnScanner:
 
             for vuln in self.VULNERABILITY_DB:
                 if vuln["package"].lower() == pkg_name:
-                    # Match version
-                    if pkg_ver in vuln["affected_versions"] or any(pkg_ver.startswith(v) for v in vuln["affected_versions"]):
+                    # Precise version matching avoiding naive prefix collisions
+                    fixed = vuln.get("fixed_version", "")
+                    if pkg_ver == fixed:
+                        continue
+
+                    is_affected = (
+                        pkg_ver in vuln["affected_versions"] or
+                        any(re.match(rf"^{re.escape(v)}(?:[-~+a-zA-Z]|$)", pkg_ver) for v in vuln["affected_versions"])
+                    )
+
+                    if is_affected:
                         match_entry = {
                             "cve": vuln["cve"],
                             "package": comp["name"],
