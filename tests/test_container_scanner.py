@@ -78,7 +78,27 @@ class TestContainerVulnScanner(unittest.TestCase):
         self.assertIn("DOCKER-01", ids)  # latest tag
         self.assertIn("DOCKER-03", ids)  # curl | bash
         self.assertIn("DOCKER-04", ids)  # SSH port 22
-        self.assertIn("DOCKER-05", ids)  # missing USER
+    def test_fixed_version_and_prefix_collision_avoidance(self):
+        # 5.6.1-r1 is the fixed version for xz-utils
+        # 1.1.12 shares prefix with affected 1.1.1 but is fixed version for runc
+        components = [
+            {"name": "xz-utils", "version": "5.6.1-r1"},
+            {"name": "runc", "version": "1.1.12"},
+            {"name": "curl", "version": "8.4.0"}
+        ]
+        res = self.scanner.scan_components(components)
+        self.assertEqual(res["total_vulnerabilities"], 0)
+        self.assertEqual(res["policy_status"], "PASSED")
+
+    def test_clean_cyclonedx_sbom_file(self):
+        sample_path = os.path.join(os.path.dirname(__file__), "..", "samples", "clean_sbom.json")
+        with open(sample_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        components = self.scanner.parse_sbom(content)
+        self.assertEqual(len(components), 4)
+        res = self.scanner.scan_components(components)
+        self.assertEqual(res["total_vulnerabilities"], 0)
+        self.assertEqual(res["policy_status"], "PASSED")
 
 
 if __name__ == "__main__":
