@@ -1,6 +1,7 @@
 # Autonomous Container Image Vulnerability & SBOM Scanner 🐳🛡️
 
 [![CI/CD Pipeline](https://github.com/GarciaVillenaLuis/container-image-vuln-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/GarciaVillenaLuis/container-image-vuln-scanner/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/GarciaVillenaLuis/container-image-vuln-scanner/actions/workflows/codeql.yml/badge.svg)](https://github.com/GarciaVillenaLuis/container-image-vuln-scanner/actions/workflows/codeql.yml)
 [![SBOM Standard](https://img.shields.io/badge/SBOM-CycloneDX%20%7C%20SPDX-0078D4?style=flat-square&logo=linuxfoundation&logoColor=white)](https://cyclonedx.org/)
 [![NIST Compliance](https://img.shields.io/badge/Security-NIST%20SP%20800--190-orange?style=flat-square)](https://csrc.nist.gov/publications/detail/sp/800-190/final)
 [![Docker Hardening](https://img.shields.io/badge/Container-CIS%20Docker%20v1.6-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
