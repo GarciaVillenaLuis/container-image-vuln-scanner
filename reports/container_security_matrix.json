@@ -1,0 +1,14 @@
+{
+  "last_audit_utc": "2026-11-03T01:30:00Z",
+  "scanner_version": "1.5.0",
+  "registry_scope": "Enterprise Multi-Cloud Container Registry (ECR / ACR / Artifact Registry)",
+  "compliance_frameworks": ["NIST SP 800-190", "CIS Docker Benchmark v1.6.0", "OWASP Container Security Top 10"],
+  "telemetry": {
+    "total_images_analyzed": 348,
+    "images_without_critical_cves": 332,
+    "compliance_ratio": 0.954,
+    "sboms_generated_cyclonedx": 348,
+    "average_remediation_window_days": 3.8
+  },
+  "status": "COMPLIANT"
+}
