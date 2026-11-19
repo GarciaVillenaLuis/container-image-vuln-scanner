@@ -15,7 +15,7 @@
     "average_remediation_window_days": 3.5
   },
   "status": "COMPLIANT",
-  "last_sync_utc": "2026-11-18T16:16:04Z",
+  "last_sync_utc": "2026-11-19T08:00:00Z",
   "telemetry_seq": 1,
-  "mosaic_seq": 8
+  "mosaic_seq": 9
 }
