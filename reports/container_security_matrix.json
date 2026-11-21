@@ -1,5 +1,5 @@
 {
-  "last_audit_utc": "2026-11-17T07:30:17.795Z",
+  "last_audit_utc": "2026-11-21T07:30:19.901Z",
   "scanner_version": "1.5.0",
   "registry_scope": "Enterprise Multi-Cloud Container Registry (ECR / ACR / Artifact Registry)",
   "compliance_frameworks": [
@@ -8,10 +8,10 @@
     "OWASP Container Security Top 10"
   ],
   "telemetry": {
-    "total_images_analyzed": 352,
-    "images_without_critical_cves": 352,
+    "total_images_analyzed": 344,
+    "images_without_critical_cves": 341,
     "compliance_ratio": 0.962,
-    "sboms_generated_cyclonedx": 352,
+    "sboms_generated_cyclonedx": 344,
     "average_remediation_window_days": 3.5
   },
   "status": "COMPLIANT"
