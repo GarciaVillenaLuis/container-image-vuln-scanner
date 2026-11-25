@@ -14,5 +14,7 @@
     "sboms_generated_cyclonedx": 344,
     "average_remediation_window_days": 3.5
   },
-  "status": "COMPLIANT"
+  "status": "COMPLIANT",
+  "last_sync_utc": "2026-11-25T14:36:00Z",
+  "telemetry_seq": 1
 }
