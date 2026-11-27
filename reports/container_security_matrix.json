@@ -1,5 +1,5 @@
 {
-  "last_audit_utc": "2026-11-27T07:30:39.128Z",
+  "last_audit_utc": "2026-11-27T07:31:00.061Z",
   "scanner_version": "1.5.0",
   "registry_scope": "Enterprise Multi-Cloud Container Registry (ECR / ACR / Artifact Registry)",
   "compliance_frameworks": [
@@ -9,7 +9,7 @@
   ],
   "telemetry": {
     "total_images_analyzed": 348,
-    "images_without_critical_cves": 348,
+    "images_without_critical_cves": 346,
     "compliance_ratio": 0.962,
     "sboms_generated_cyclonedx": 348,
     "average_remediation_window_days": 3.5
